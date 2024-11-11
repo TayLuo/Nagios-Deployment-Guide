@@ -112,16 +112,21 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
 <img src="https://imgur.com/92x1RzH.png" height="80%" width="80%" >
 <br />   
 
-6. Download, Install Nagios Plugins
+7. Create Nagios Web Interface Password and Start and Enable Services
    
+   Creates a password for nagiosadmin to access the Nagios web interface.:
    
-:
+   		htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
    
-   		cd /tmp
-   
-   		ss -ntulp | grep 2049
+   		systemctl start httpd
 
-		showmount -e
+		systemctl enable httpd
+
+		systemctl start nagios
+
+		systemctl enable nagios
+
+		systemctl status nagios
 <p align="center"> </p>
-<img src="https://imgur.com/fMs0z5V.png" height="80%" width="80%" >
+<img src="https://imgur.com/AbUZkYM.png" height="80%" width="80%" >
 <br />    
