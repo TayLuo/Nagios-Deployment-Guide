@@ -19,17 +19,18 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
 <img src="https://imgur.com/odDHSSA.png" height="80%" width="80%" >
 <br />    
 
-5. Verify NFS Server installation
+2. Create Nagios User and Group
+   In this step we want to create nagios user and assign it in the right group:
    
-   Enter the following command to verify the installation of NFS, port 2049 listening state, check if there is anything shared out:
+   		useradd nagios
    
-   		dkpg -l | grep -i nfs
-   
-   		ss -ntulp | grep 2049
+   		groupadd nagcmd
 
-		showmount -e
+		usermod -a -G nagcmd nagios
+
+		usermod -a -G nagcmd apache
 <p align="center"> </p>
-<img src="https://imgur.com/fMs0z5V.png" height="80%" width="80%" >
+<img src="https://imgur.com/dyjlKrD.png" height="80%" width="80%" >
 <br />    
 
 5. Verify NFS Server installation
