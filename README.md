@@ -142,8 +142,11 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
    		vi hosts.cfg
 
 		define host {
+
  use linux-server
+ 
  host_name CentosServer
+ 
  alias My First Server
  address 192.168.100.162
  max_check_attempts 5
