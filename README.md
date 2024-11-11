@@ -10,7 +10,7 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
    
    Ensure that the system has essential packages like gcc, glibc, make, wget, and openssl installed, there are more packages need to be installed.    :
    
-   		dnf install httpd php gcc glibc glibc-common gd gd-devel make net-snmp unzip wge
+   		dnf install httpd php gcc glibc glibc-common gd gd-devel make net-snmp unzip wget
    
    		
 
