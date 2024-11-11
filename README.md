@@ -16,7 +16,7 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
 
 		
 <p align="center"> </p>
-<img src="https://imgur.com/fMs0z5V.png" height="80%" width="80%" >
+<img src="https://imgur.com/odDHSSA.png" height="80%" width="80%" >
 <br />    
 
 5. Verify NFS Server installation
