@@ -199,6 +199,8 @@ define service {
  11: Don't forget to restart your nagios service, then access the web console:
 
  		http://Your-IP-Address/nagios
-
+<p align="center"> </p>
+<img src="https://imgur.com/eEazxN9.png" height="80%" width="80%" >
+<br />  
 
 By following this guide, administrators can set up a robust Nagios environment, ensuring they can detect issues early, respond quickly, and keep systems running smoothly. This setup allows teams to minimize downtime, optimize resources, and gain valuable insights into infrastructure performance over time.
