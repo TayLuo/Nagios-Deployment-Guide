@@ -6,15 +6,15 @@ This repository provides a complete, step-by-step guide for deploying Nagios in 
 In this tutorial, I will use Centos as my lab environment, you can pick any distribution you'd like. 
 If you need help on how to set a Centos VM on Azure, please click [here](https://www.youtube.com/watch?v=cokJZ2gJhxY)
 
-1. Verify NFS Server installation
+1. Install required Packages
    
-   Enter the following command to verify the installation of NFS, port 2049 listening state, check if there is anything shared out:
+   Ensure that the system has essential packages like gcc, glibc, make, wget, and openssl installed, there are more packages need to be installed.    :
    
-   		dkpg -l | grep -i nfs
+   		dnf install httpd php gcc glibc glibc-common gd gd-devel make net-snmp unzip wge
    
-   		ss -ntulp | grep 2049
+   		
 
-		showmount -e
+		
 <p align="center"> </p>
 <img src="https://imgur.com/fMs0z5V.png" height="80%" width="80%" >
 <br />    
