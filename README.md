@@ -46,25 +46,25 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
 		cd nagios-4.5.4
 
 <p align="center"> </p>
-<img src="https://imgur.com/u1qI3Vz.png" height="80%" width="80%" >
-<br />    
+<img src="https://imgur.com/u1qI3Vz.png" height="80%" width="80%" > 
 <p align="center"> </p>
 <img src="https://imgur.com/CPnLFG7.png" height="80%" width="80%" >
 <br />    
 
-5. Verify NFS Server installation
+4. Configure Nagios Core
    
-   Enter the following command to verify the installation of NFS, port 2049 listening state, check if there is anything shared out:
+    Installs development libraries for SSL, needed for secure communication. Configures Nagios, specifying that the nagcmd group will manage command execution permissions:
    
-   		dkpg -l | grep -i nfs
+   		dnf install openssl-devel
    
-   		ss -ntulp | grep 2049
+   		./configure --with-command-group=nagcmd
 
-		showmount -e
+		
 <p align="center"> </p>
-<img src="https://imgur.com/fMs0z5V.png" height="80%" width="80%" >
-<br />    
-
+<img src="https://imgur.com/WG230aF.png" height="80%" width="80%" >
+<p align="center"> </p>
+<img src="https://imgur.com/an83fsQ.png" height="80%" width="80%" >
+<br />  
 
 5. Verify NFS Server installation
    
