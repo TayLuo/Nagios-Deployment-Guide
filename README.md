@@ -86,7 +86,7 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
 
 5. Verify NFS Server installation
    
-   Enter the following command to verify the installation of NFS, port 2049 listening state, check if there is anything shared out:
+   Enter the following command to verify the installation of NFS, port 2049 listening state, check if there is anything shared out. I will not provide screenshot on this step.:
    
    		dkpg -l | grep -i nfs
    
@@ -97,9 +97,10 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
 <img src="https://imgur.com/fMs0z5V.png" height="80%" width="80%" >
 <br />   
 
-5. Verify NFS Server installation
+6. Download, Install Nagios Plugins
    
-   Enter the following command to verify the installation of NFS, port 2049 listening state, check if there is anything shared out:
+   
+There are many commands in this step, download the nagios plugins, extract the nagios plugins, configure the plugins for nagios, install the plugins. Set up a firewall rule allow nagios to go through, I configure a firewall rule in my azure. :
    
    		dkpg -l | grep -i nfs
    
