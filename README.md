@@ -130,3 +130,59 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
 <p align="center"> </p>
 <img src="https://imgur.com/AbUZkYM.png" height="80%" width="80%" >
 <br />    
+
+
+8. Configure Hosts in Nagios
+   
+   Navigates to the directory where Nagios configuration files are stored. Opens hosts.cfg configuration files for editing,  Define monitoring settings for a specific host and a 
+   specific service in your own environment :
+   
+   		cd /usr/local/nagios/etc/objects/
+   
+   		vi hosts.cfg
+
+		define host {
+ use linux-server
+ host_name CentosServer
+ alias My First Server
+ address 192.168.100.162
+ max_check_attempts 5
+ check_period 24x7
+ notification_interval 30
+ notification_period 24x7
+}
+define service {
+ use generic-service
+ host_name CentosServer
+ service_description PING
+ check_command check_ping!100.0,20%!500.0,60%
+ max_check_attempts 5
+ normal_check_interval 5
+ retry_check_interval 1
+ check_period 24x7
+ notification_interval 30
+ notification_period 24x7
+}
+
+
+
+		
+
+<p align="center"> </p>
+<img src="https://imgur.com/vjCvrAK.png" height="80%" width="80%" >
+<br />  
+
+4. Configure Nagios Core
+   
+    Installs development libraries for SSL, needed for secure communication. Configures Nagios, specifying that the nagcmd group will manage command execution permissions:
+   
+   		dnf install openssl-devel
+   
+   		./configure --with-command-group=nagcmd
+
+		
+<p align="center"> </p>
+<img src="https://imgur.com/WG230aF.png" height="80%" width="80%" >
+<p align="center"> </p>
+<img src="https://imgur.com/an83fsQ.png" height="80%" width="80%" >
+<br />  
