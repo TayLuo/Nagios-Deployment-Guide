@@ -189,3 +189,13 @@ define service {
 <p align="center"> </p>
 <img src="https://imgur.com/MH0dlIY.png" height="80%" width="80%" >
 <br />  
+
+10. Check the configuration file
+
+    Use the following command to validate the configuration file:
+
+	/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+
+ 11: Don't forget to restart your nagios service, then access the web console:
+
+ 		http://Your-IP-Address/nagios
