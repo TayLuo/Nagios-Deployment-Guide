@@ -135,13 +135,13 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
 8. Configure Hosts in Nagios
    
    Navigates to the directory where Nagios configuration files are stored. Opens hosts.cfg configuration files for editing,  Define monitoring settings for a specific host and a 
-   specific service in your own environment :
+   specific service in your own environment. Please check the "Define host" file:
    
    		cd /usr/local/nagios/etc/objects/
    
    		vi hosts.cfg
 
-		define host {
+
 
  use linux-server
  
@@ -175,17 +175,17 @@ define service {
 <img src="https://imgur.com/vjCvrAK.png" height="80%" width="80%" >
 <br />  
 
-4. Configure Nagios Core
-   
-    Installs development libraries for SSL, needed for secure communication. Configures Nagios, specifying that the nagcmd group will manage command execution permissions:
-   
-   		dnf install openssl-devel
-   
-   		./configure --with-command-group=nagcmd
+9. Update Nagios Configuration
 
-		
+   Navigates to the main Nagios configuration directory.Opens the main configuration file for editing. Adds the custom hosts configuration file to the main Nagios configuration: 
+   cfg_file=/usr/local/nagios/etc/objects/hosts.cfg.:
+   
+   		cd /usr/local/nagios/etc
+   
+   		vi nagios.cfg
+
+   		cfg_file=/usr/local/nagios/etc/objects/hosts.cfg
+
 <p align="center"> </p>
-<img src="https://imgur.com/WG230aF.png" height="80%" width="80%" >
-<p align="center"> </p>
-<img src="https://imgur.com/an83fsQ.png" height="80%" width="80%" >
+<img src="https://imgur.com/MH0dlIY.png" height="80%" width="80%" >
 <br />  
