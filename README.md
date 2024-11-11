@@ -78,9 +78,9 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
   
   		make install-init
 
-    		make install-config
-
-      		make install-webconf
+		make install-config
+  
+  		make install-webconf
  
 
 
