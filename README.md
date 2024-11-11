@@ -84,25 +84,40 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
  
 
 
-5. Verify NFS Server installation
+6. Download, Install Nagios Plugins
    
-   Enter the following command to verify the installation of NFS, port 2049 listening state, check if there is anything shared out. I will not provide screenshot on this step.:
+  There are many commands in this step, download the nagios plugins, extract the nagios plugins, configure the plugins for nagios, install the plugins. Set up a firewall rule allow 	 
+  nagios to go through, I configured a firewall rule in my azure environment. :
    
-   		dkpg -l | grep -i nfs
+   		cd /tmp
    
-   		ss -ntulp | grep 2049
+   		wget https://nagios-plugins.org/download/nagios-plugins-2.4.11.tar.g
 
-		showmount -e
+		tar xzf nagios-plugins-2.4.11.tar.gz
+
+		cd nagios-plugins-2.4.11
+
+  		./configure --with-nagios-user=nagios --with-nagios-group=nagios
+
+   		make
+
+   		make install
+
+   		
   <p align="center"> </p>
-<img src="https://imgur.com/fMs0z5V.png" height="80%" width="80%" >
+<img src="https://imgur.com/w0eDgSV.png" height="80%" width="80%" >
+<p align="center"> </p>
+<img src="https://imgur.com/WbqNO8B.png" height="80%" width="80%" >
+ <p align="center"> </p>
+<img src="https://imgur.com/92x1RzH.png" height="80%" width="80%" >
 <br />   
 
 6. Download, Install Nagios Plugins
    
    
-There are many commands in this step, download the nagios plugins, extract the nagios plugins, configure the plugins for nagios, install the plugins. Set up a firewall rule allow nagios to go through, I configure a firewall rule in my azure. :
+:
    
-   		dkpg -l | grep -i nfs
+   		cd /tmp
    
    		ss -ntulp | grep 2049
 
