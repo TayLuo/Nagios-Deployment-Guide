@@ -75,7 +75,7 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
    		make install
 
 		make install-commandmode
-
+  
   		make install-init
 
     		make install-config
