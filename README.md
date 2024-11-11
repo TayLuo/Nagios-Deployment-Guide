@@ -33,19 +33,24 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
 <img src="https://imgur.com/dyjlKrD.png" height="80%" width="80%" >
 <br />    
 
-5. Verify NFS Server installation
+3. Download and Extract Nagios Core
    
-   Enter the following command to verify the installation of NFS, port 2049 listening state, check if there is anything shared out:
+   Changes to /tmp directory, dowload the nagios core file and extracts the downloaded tar.gz file.:
    
-   		dkpg -l | grep -i nfs
+   		cd /tmp
    
-   		ss -ntulp | grep 2049
+   		wget -O nagios-4.5.4.tar.gz https://go.nagios.org/l/975333/2024-08-14/6dqd8
 
-		showmount -e
+		tar xzf nagios-4.5.4.tar.gz
+
+		cd nagios-4.5.4
+
 <p align="center"> </p>
-<img src="https://imgur.com/fMs0z5V.png" height="80%" width="80%" >
+<img src="https://imgur.com/u1qI3Vz.png" height="80%" width="80%" >
 <br />    
-
+<p align="center"> </p>
+<img src="https://imgur.com/CPnLFG7.png" height="80%" width="80%" >
+<br />    
 
 5. Verify NFS Server installation
    
