@@ -66,6 +66,24 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
 <img src="https://imgur.com/an83fsQ.png" height="80%" width="80%" >
 <br />  
 
+5.Install Nagios Core
+
+  Compiles the nagios code, install its binaries and files, install script for nagios, configure Apache for nagios web interface:
+   
+   		make all
+   
+   		make install
+
+		make install-commandmode
+
+  		make install-init
+
+    		make install-config
+
+      		make install-webconf
+ 
+
+
 5. Verify NFS Server installation
    
    Enter the following command to verify the installation of NFS, port 2049 listening state, check if there is anything shared out:
@@ -75,23 +93,9 @@ If you need help on how to set a Centos VM on Azure, please click [here](https:/
    		ss -ntulp | grep 2049
 
 		showmount -e
-<p align="center"> </p>
+  <p align="center"> </p>
 <img src="https://imgur.com/fMs0z5V.png" height="80%" width="80%" >
-<br />    
-
-
-5. Verify NFS Server installation
-   
-   Enter the following command to verify the installation of NFS, port 2049 listening state, check if there is anything shared out:
-   
-   		dkpg -l | grep -i nfs
-   
-   		ss -ntulp | grep 2049
-
-		showmount -e
-<p align="center"> </p>
-<img src="https://imgur.com/fMs0z5V.png" height="80%" width="80%" >
-<br />    
+<br />   
 
 5. Verify NFS Server installation
    
